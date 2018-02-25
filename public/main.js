@@ -1,5 +1,5 @@
 $(function(){
-  var $sh1 = $("h1");
+  var $h1 = $("h1");
   var $zip = $("input[name='zip']");
 
   $("form").on("submit", function(event){
@@ -8,7 +8,7 @@ $(function(){
     var zipCode = $.trim($zip.val());
     $h1.text("Loading...");
 
-    var request = $.ajex({
+    var request = $.ajax({
       url: "/" + zipCode,
       dataType: "json"
     });

@@ -43,3 +43,7 @@ app.get(/^\/(\d{5})$/, function(req, res, next){
 app.use(function(req,res){
   res.status(404).render("404");
 });
+
+app.listen(3000,function(error){
+  console.log("running at localhost:3000");
+});
