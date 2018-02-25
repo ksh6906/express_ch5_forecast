@@ -14,7 +14,7 @@ $(function(){
     });
 
     request.done(function(data){
-      var temperature = data.temperature;
+      var temperature = parseInt((data.temperature-32) / 1.8 * 10);
       $h1.html("It is "+temperature+"&#176; in "+zipCode + ".");
     });
     request.fail(function(){
